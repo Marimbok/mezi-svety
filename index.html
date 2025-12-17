@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Za oponou</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1 class="title">Za oponou</h1>
+    <p class="subtitle">Něco se dalo do pohybu</p>
+
+    <section class="countdown" aria-label="Odpočet do akce">
+      <div class="countdown-row" id="countdown">
+        <div class="unit"><div class="num" id="dd">00</div><div class="lab">dní</div></div>
+        <div class="sep">:</div>
+        <div class="unit"><div class="num" id="hh">00</div><div class="lab">hod</div></div>
+        <div class="sep">:</div>
+        <div class="unit"><div class="num" id="mm">00</div><div class="lab">min</div></div>
+        <div class="sep">:</div>
+        <div class="unit"><div class="num" id="ss">00</div><div class="lab">sek</div></div>
+      </div>
+      <div class="countdown-note" id="countdownNote"></div>
+    </section>
+
+    <section class="video">
+      <div class="video-frame">
+        <video controls preload="metadata" playsinline>
+          <source src="media/teaser.mp4" type="video/mp4" />
+          Tvůj prohlížeč nepodporuje video.
+        </video>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <a class="social" href="https://facebook.com/" target="_blank" rel="noopener">
+      Facebook
+    </a>
+    <span class="dot">•</span>
+    <a class="social" href="https://instagram.com/" target="_blank" rel="noopener">
+      Instagram
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

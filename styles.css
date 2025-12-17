@@ -1,0 +1,214 @@
+:root{
+  --bg: #07090c;
+  --ink: #e8edf6;
+  --muted: rgba(232,237,246,.75);
+  --accent: #d23b3b;
+  --panel: rgba(0,0,0,.30);
+  --line: rgba(232,237,246,.16);
+  --radius: 18px;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background-color: var(--bg);
+  background-image: url("image/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+
+/* Ztmavení pozadí kvůli čitelnosti */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(900px 600px at 20% 10%, rgba(210,59,59,.12), transparent 60%),
+    radial-gradient(900px 600px at 85% 15%, rgba(130,255,220,.10), transparent 55%),
+    linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.70));
+  pointer-events: none;
+}
+
+.wrap{
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 18px 80px;
+  text-align: center;
+}
+
+.title{
+  margin: 0 0 18px;
+  font-size: clamp(44px, 7vw, 82px);
+  letter-spacing: .12em;
+  font-weight: 600;
+  text-transform: none;
+
+  text-shadow:
+    0 2px 0 rgba(0,0,0,.9),
+    0 10px 45px rgba(0,0,0,.75);
+}
+
+.subtitle{
+  margin-top: -14px;     /* přimáčkne k titulku */
+  margin-bottom: 22px;
+  font-size: 15px;
+  font-style: italic;    /* kurzíva */
+  letter-spacing: 0.14em;
+  color: rgba(232,237,246,.65);
+}
+
+
+/* Rámeček a panel */
+.countdown{
+  margin: 0 auto 22px;
+  max-width: 720px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 14px;
+  backdrop-filter: blur(6px);
+}
+
+.countdown-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.unit{
+  min-width: 110px;
+  padding: 10px 10px 8px;
+  border-radius: 14px;
+  border: 1px solid rgba(232,237,246,.12);
+  background: rgba(0,0,0,.28);
+}
+
+.num{
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  color: var(--accent);
+  text-shadow: 0 10px 35px rgba(210,59,59,.25);
+}
+
+.lab{
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.sep{
+  font-size: 28px;
+  color: rgba(232,237,246,.55);
+}
+
+.countdown-note{
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.video{
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(0,0,0,.35);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  backdrop-filter: blur(6px);
+}
+
+@media (max-width: 600px){
+  .video{
+    max-width: 100%;
+  }
+}
+
+.video-frame{
+  max-width: 720px;     /* šířka pro vertikální video */
+  margin: 0 auto;       /* vystředění */
+}
+
+
+video{
+  width: 100%;
+  max-height: 90vh;
+  border-radius: 14px;
+  display: block;
+  background: radial-gradient(
+    600px 300px at center,
+    rgba(20,30,25,.85),
+    rgba(0,0,0,.95)
+  );
+  filter: contrast(1.05) saturate(0.95);
+  object-fit: contain;
+  /*aspect-ratio: 9 / 16;*/
+}
+
+
+.hint{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer{
+  position: relative;
+  padding: 18px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(232,237,246,.10);
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
+}
+
+.social{
+  color: rgba(232,237,246,.85);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(232,237,246,.35);
+}
+
+.social:hover{
+  color: var(--ink);
+  border-bottom-color: rgba(232,237,246,.7);
+}
+
+.dot{ margin: 0 10px; opacity: .7; }
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("fonts/EBGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("fonts/EBGaramond-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("fonts/EBGaramond-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
