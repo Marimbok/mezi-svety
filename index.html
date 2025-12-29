@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="cs">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,7 +13,6 @@
   <main class="wrap">
     <h1 class="title">Mezi světy</h1>
     <p class="subtitle">Předivo mezi světy povoluje.</p>
-<!--
     <section class="incident">
       <h2 class="incident-title">Incident na Miskatonické univerzitě</h2>
 
@@ -21,14 +21,14 @@
       </p>
 
       <p>
-        Zařízení zabavené při razii arkham­ských detektivů u místního podivína,
+        Zařízení zabavené při razii arkhamských detektivů u místního podivína,
         dlouhodobě známého svými výstředními teoriemi, a následně předané univerzitním vědcům ke zkoumání, 
         se bez zjevné příčiny aktivovalo. Od té chvíle začalo vydávat pravidelné impulzy.
       </p>
 
       <p>
         Analýza ukázala znepokojivý detail: interval mezi jednotlivými impulzy se postupně zkracuje. 
-        Výpočty naznačují, že pokud se trend nezmění, dosáhne nulové hodnoty 29. prosince v 16:04.
+        Výpočty naznačují, že pokud se trend nezmění, dosáhne nulové hodnoty 28. února v 16:00.
       </p>
 
       <p>
@@ -39,7 +39,6 @@
       </p>
       
     </section>
-    -->
     <section class="countdown" aria-label="Odpočet do akce">
       <div class="countdown-row" id="countdown">
         <div class="unit"><div class="num" id="dd">00</div><div class="lab">dní</div></div>
@@ -53,13 +52,194 @@
     <!-- <div class="countdown-note" id="countdownNote"></div> -->
     </section>
 
+    <section class="povolani-block">
+      <div class="povolani-image">
+        <img src="image/arch1.png" alt="Archeolog">
+      </div>
+      <div class="povolani-text">
+        <h2>Archeologové</h2>
+        <p>
+          Zaměřují se na výzkum starých textů, symbolů a artefaktů nalezených během expedic.  
+        </p>
+        <p>
+          Často luští šifry, porovnávají fragmenty a hledají souvislosti.
+        </p>
+        <p>
+          Fyzická námaha jim není cizí, ale rozhodující je bystrá mysl a schopnost logicky uvažovat.
+        </p>
+        <p>
+          Specialisti na šifry, staré jazyky a neobvyklé nálezy. Místo síly spoléhají na znalosti.
+        </p>
+        <p></p>
+        <div class="schopnosti">
+          <h4>Schopnosti:</h4>
+          Fyzička: * <br>
+          Intelekt: *****
+        </div>
+      </div>
+    </section>
+
+    <section class="povolani-block">
+      <div class="povolani-image">
+        <img src="image/dete1.png" alt="Archeolog">
+      </div>
+      <div class="povolani-text">
+        <h2>Detektivové</h2>
+        <p>
+          Zabývají se vyšetřováním nevyjasněných případů, sledováním stop a výslechem podezřelých. 
+        </p>
+        <p>
+          Musejí si všímat detailů, spojovat informace a zároveň být připraveni jednat.
+        </p>
+        <p>
+          Úspěch závisí jak na schopnosti dedukce, tak na fyzické zdatnosti při pátrání v neznámém terénu.
+        </p>
+        <p>
+          Řeší zločiny, shromažďují důkazy a dopadají pachatele. Vyžadují vyváženou kombinaci bystrosti a fyzické připravenosti.
+        </p>
+        <p></p>
+        <div class="schopnosti">
+          <h4>Schopnosti:</h4>
+          Fyzička: *** <br>
+          Intelekt: ***
+        </div>
+      </div>
+    </section>
+
+    <section class="povolani-block">
+      <div class="povolani-image">
+        <img src="image/novi1.png" alt="Archeolog">
+      </div>
+      <div class="povolani-text">
+        <h2>Novináři</h2>
+        <p>
+          Pohybují se v terénu, vyhledávají svědky a dostávají se na místa, kam se ostatní neodváží.
+        </p>
+        <p>
+          Sbírají informace přímo u zdroje, pronásledují stopy a snaží se získat pravdu dřív, než zmizí.
+        </p>
+        <p>
+          Spoléhají hlavně na pohyb, odvahu a schopnost dostat se do správného místa ve správný čas.
+        </p>
+        <p>
+          Hledají informace v terénu, ne v archivech. Musejí být rychlí, odolní a připraveni dostat se tam, kde se věci skutečně dějí.
+        </p>
+        <p></p>
+        <div class="schopnosti">
+          <h4>Schopnosti:</h4>
+          Fyzička: **** <br>
+          Intelekt: **
+        </div>
+      </div>
+    </section>
+
     <section class="video">
+      <h2>Úvodní video</h2>
       <div class="video-frame">
         <video controls preload="metadata" playsinline>
           <source src="media/teaser.mp4" type="video/mp4" />
           Tvůj prohlížeč nepodporuje video.
         </video>
       </div>
+    </section>
+
+    <section class="video">
+      <h2>Pozvánka</h2>
+      <div class="video-frame">
+        <video controls preload="metadata" playsinline>
+          <source src="media/video2.mp4" type="video/mp4" />
+          Tvůj prohlížeč nepodporuje video.
+        </video>
+      </div>
+    </section>
+
+    <section class="signup" aria-label="Přihláška na akci">
+      <h2 class="signup-title">Přihláška</h2>
+      <p class="signup-subtitle">Potřebujeme tvoji pomoc!</p>
+
+      <form
+        class="signup-form"
+        id="signupForm"
+        action="https://formspree.io/f/mvzoajpb"
+        method="POST"
+      >
+        <div class="signup-grid">
+          <label class="field">
+            <span class="field-label">Jméno *</span>
+            <input class="field-input" type="text" name="firstName" autocomplete="given-name" required>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Příjmení *</span>
+            <input class="field-input" type="text" name="lastName" autocomplete="family-name" required>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Přezdívka</span>
+            <input class="field-input" type="text" name="nickname" autocomplete="nickname">
+          </label>
+
+          <label class="field">
+            <span class="field-label">Email *</span>
+            <input class="field-input" type="email" name="email" autocomplete="email" required>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Telefon *</span>
+            <input class="field-input" type="tel" name="phone" autocomplete="tel" inputmode="tel" required>
+          </label>
+        </div>
+
+        <fieldset class="fieldset">
+          <legend class="legend">Preferované povolání *</legend>
+          <p class="fieldset-note">
+            Vámi preferované povolání.
+          </p>
+          <div class="choices">
+            <label class="choice">
+              <input type="radio" name="job1" value="Archeolog" required>
+              <span>Archeolog</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="job1" value="Detektiv" required>
+              <span>Detektiv</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="job1" value="Novinář" required>
+              <span>Novinář</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="legend">Náhradní povolání *</legend>
+          <p class="fieldset-note">
+            Náhradní povolání pro případ velkého zájmu vámi preferovaného povolání.
+          </p>
+          <div class="choices">
+            <label class="choice">
+              <input type="radio" name="job2" value="Archeolog" required>
+              <span>Archeolog</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="job2" value="Detektiv" required>
+              <span>Detektiv</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="job2" value="Novinář" required>
+              <span>Novinář</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label class="field field-full">
+          <span class="field-label">Poznámka</span>
+          <textarea class="field-input" name="note" rows="4"></textarea>
+        </label>
+
+        <button class="signup-btn" type="submit">Přihlásit</button>
+        <p class="signup-footnote">Pole označená * jsou povinná.</p>
+      </form>
     </section>
 
   </main>
@@ -77,6 +257,4 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
 

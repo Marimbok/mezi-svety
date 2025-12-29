@@ -1,5 +1,5 @@
 // ===== Odpočet: 29.12.2025 18:00:00 Praha =====
-const target = new Date("2025-12-29T16:04:00+01:00"); // CET
+const target = new Date("2026-02-28T16:00:00+01:00"); // CET
 
 const $ = (id) => document.getElementById(id);
 
@@ -55,3 +55,42 @@ renderCountdown();
 
 // 2) pak aktualizuj každou sekundu
 setInterval(renderCountdown, 1000);
+
+const form = document.getElementById("signupForm");
+const signupSection = form.closest(".signup");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // zabrání přesměrování
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (response.ok) {
+        // nahradí celý formulář potvrzením
+        signupSection.innerHTML = `
+          <div class="signup-success">
+            <h3>Odesláno</h3>
+            <p>
+              Tvá přihláška byla zaznamenána.<br>
+              Další instrukce přijdou v pravý čas.
+            </p>
+          </div>
+        `;
+      } else {
+        alert("Odeslání se nezdařilo. Zkus to prosím znovu.");
+      }
+    } catch (err) {
+      alert("Chyba připojení. Zkus to prosím později.");
+    }
+  });
+}
+
